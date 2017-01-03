@@ -28,7 +28,7 @@ Másold be a "Helló, Világ!" kódot a szerkesztődbe és futtasd az eszközön
 
     Lehet, hogy nem fog működni. :-)
     
-    Itt válnak a dolgok izgalmassá és MicroPython segítőkész próbál lenni. Ha hibát talál, egy segítő üzenetet fog megjeleníteni a micro:bit képernyőjén. Ha tudja, megmondja, hogy a kód melyik sorában van a hiba.
+    Itt válnak a dolgok izgalmassá és a MicroPython segítőkész próbál lenni. Ha hibát talál, egy segítő üzenetet fog megjeleníteni a micro:bit képernyőjén. Ha tudja, megmondja, hogy a kód melyik sorában van a hiba.
     
     A Python azt várja, hogy **PONTOSAN** a helyes kódot írd. Például a ``Microbit``, ``microbit`` és ``microBit`` nem ugyanazt jelenti a Python számára. Ha a MicroPython ``NameError``-t jelez, az valószínűleg azért van, mert valamit pontatlanul írtál. Ez olyan, mint a különbség "Nicholas" és "Nicolas" között. A nevük hasonlít, mégis két különböző emberről van szó.
 
