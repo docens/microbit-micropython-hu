@@ -14,13 +14,13 @@ Minden sornak fontos szerepe van. Az első sor::
 
     from microbit import *
 
-...megmondja a MicroPythonnak, hogy szerezzen meg mindent, ami ahhoz kell, hogy a BBC micro:bittel együtt tudjon működni. Minden ehhez szükséges dolgot egy ``microbit`` nevű modul tartalmaz (a modul egy könyvtár, ami előre megírt kódot tartalmaz). Amikor importálsz (``import``) valamit, akkor megmondod a MicroPythonnak, hogy szeretnéd használni. Pythonban a ``*`` jelenti azt, hogy *minden(t)*. Tehát a ``from microbit import *`` sor magyarul azt jelenti, hogy "minden szeretnék tudni használni, ami microbit könyvtárban van".
+...megmondja a MicroPythonnak, hogy szerezzen meg mindent, ami ahhoz kell, hogy a BBC micro:bittel együtt tudjon működni. Minden ehhez szükséges dolgot egy ``microbit`` nevű modul tartalmaz (a modul egy könyvtár, ami előre megírt kódot tartalmaz). Amikor importálsz (``import``) valamit, akkor megmondod a MicroPythonnak, hogy szeretnéd azt használni. Pythonban a ``*`` jelenti azt, hogy *minden(t)*. Tehát a ``from microbit import *`` sor magyarul azt jelenti, hogy "mindent szeretnék tudni használni, ami a microbit könyvtárban van".
 
 A második sor::
 
-    display.scroll("Hello, Világ!")
+    display.scroll("Helló, Világ!")
 
-...megmondja a MicroPythonnak, hogy a kijelzőn futtassa végig a "Helló, Világ!" *stringet* (a programozásban stringnek nevezik a karakterek sorozatát). A ``display`` a ``microbit`` modul egyik objektuma, ami az eszköz kijelzőjét jelöli. A kijelzőt utasíthatjuk dolgok elvézésére egy ponttal (``.``), amit egy parancsnak kinéző kifejezés követ (ezeket a kifejezéseket *metódusnak* nevezzük). Ebben az esetben a ``scroll`` metódust használjuk. Mivel a ``scroll`` metódusnak tudnia kell, hogy milyen karaktereket szeretnénk végigfuttatni a képernyőn, ezt zárójelek között két idézőjel közé rakjuk. Ezeket *argumentumoknak* nevezzük. Vagyis a ``display.scroll("Hello, World!")`` sor magyarul: "a kijelzőn szeretném végigfuttatni a "Helló, Világ!" szöveget". Ha egy metódusnak nincs argumentuma, akkor két üres zárójelet teszünk: ``()``.
+...megmondja a MicroPythonnak, hogy a kijelzőn futtassa végig a "Helló, Világ!" *stringet* (a programozásban stringnek nevezik a karakterek sorozatát). A ``display`` a ``microbit`` modul egyik objektuma, ami az eszköz kijelzőjét jelöli. A kijelzőt utasíthatjuk dolgok elvézésére egy ponttal (``.``), amit egy parancsnak kinéző kifejezés követ (ezeket a kifejezéseket *metódusnak* nevezzük). Ebben az esetben a ``scroll`` metódust használjuk. Mivel a ``scroll`` metódusnak tudnia kell, hogy milyen karaktereket szeretnénk végigfuttatni a képernyőn, ezt zárójelek között két idézőjel közé rakjuk. Ezeket *argumentumoknak* nevezzük. Vagyis a ``display.scroll(Helló, Világ!")`` sor magyarul: "a kijelzőn szeretném végigfuttatni a "Helló, Világ!" szöveget". Ha egy metódusnak nincs argumentuma, akkor két üres zárójelet teszünk: ``()``.
 
 Másold be a "Helló, Világ!" kódot a szerkesztődbe és futtasd az eszközön. Ki tudod találni, hogyan kell megváltoztatni az üzenetet? Be tudod állítani, hogy neked köszönjön? Például én úgy írnám át, hogy azt írja ki, hogy "Helló, Dani!". Egy kis segítség: a ``scroll`` metódus argumentumát kell megváltoztatni.
 
@@ -34,4 +34,4 @@ Másold be a "Helló, Világ!" kódot a szerkesztődbe és futtasd az eszközön
 
     Ha a MicroPython ``SyntaxError``-t jelez, akkor valamit olyan módon írtál, amit a MicroPython nem ért meg. Ellenőrizd, hogy nem hagytál-e ki egy speciális karaktert, mint például ``"`` vagy ``:``. Ez olyan. mintha pontot raknál egy mondat közepére. Nehéz megérteni, hogy mit akarsz mondani pontosan.
 
-    Előfordulhat, hogy a microbited nem reagál: nem tudsz új kódot futtatni rajta vagy kódot beírni a szerkesztődbe. Ha ez történik, akkor húzd ki az USB kábelt (és a töltőt is, ha csatlakoztatva van), majd csatlakotasd a kábelt újra. Lehet, hogy majd ki is kell lépned és újraindítanod a szerkesztőprogramod.
+    Előfordulhat, hogy a microbited nem reagál: nem tudsz új kódot futtatni rajta vagy kódot beírni a szerkesztődbe. Ha ez történik, akkor húzd ki az USB kábelt (és a töltőt is, ha csatlakoztatva van), majd csatlakoztasd a kábelt újra. Lehet, hogy majd ki is kell lépned és újraindítanod a szerkesztőprogramod.
