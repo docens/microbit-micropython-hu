@@ -1,72 +1,43 @@
-Hello, World!
+Helló, Világ!
 -------------
 
-The traditional way to start programming in a new language is to get your
-computer to say, "Hello, World!".
+A programozást hagyományosan úgy kezdjük, hogy a számítógéppel kiíratjuk, hogy "Helló, Világ!".
 
 .. image:: ../scroll-hello.gif
 
-This is easy with MicroPython::
+Ez MicroPythonnal egyszerű::
 
     from microbit import *
-    display.scroll("Hello, World!")
+    display.scroll("Helló, Világ!")
 
-Each line does something special. The first line::
+Minden sornak fontos szerepe van. Az első sor::
 
     from microbit import *
 
-...tells MicroPython to get all the stuff it needs to work with the BBC
-micro:bit. All this stuff is in a module called ``microbit`` (a module
-is a library of pre-existing code). When you ``import`` something you're telling
-MicroPython that you want to use it, and ``*`` is Python's way to say
-*everything*. So, ``from microbit import *`` means, in English, "I want to be
-able to use everything from the microbit code library".
+...megmondja a MicroPythonnak, hogy szerezzen meg mindent, ami ahhoz kell, hogy a BBC micro:bittel együtt tudjon működni. Minden ehhez szükséges dolgot egy ``microbit`` nevű modul tartalmaz (a modul egy könyvtár, ami előre megírt kódot tartalmaz). Amikor importálsz (``import``) valamit, akkor megmondod a MicroPythonnak, hogy szeretnéd használni. Pythonban a ``*`` jelenti azt, hogy *minden(t)*. Tehát a ``from microbit import *`` sor magyarul azt jelenti, hogy "minden szeretnék tudni használni, ami microbit könyvtárban van".
 
-The second line::
+A második sor::
 
-    display.scroll("Hello, World!")
+    display.scroll("Hello, Világ!")
 
-...tells MicroPython to use the display to scroll the string of characters
-"Hello, World!". The ``display`` part of that line is an *object* from the
-``microbit`` module that represents the device's physical display (we say
-"object" instead of "thingy", "whatsit" or "doodah"). We can tell the display
-to do things with a full-stop ``.`` followed by what looks like a command (in
-fact it's something we call a *method*). In this case we're using the
-``scroll`` method. Since ``scroll`` needs to know what characters to scroll
-across the physical display we specify them between double quotes (``"``)
-within parenthesis (``(`` and ``)``). These are called the *arguments*. So,
-``display.scroll("Hello, World!")`` means, in English, "I want you to use the
-display to scroll the text 'Hello, World!'". If a method doesn't need any
-arguments we make this clear by using empty parenthesis like this: ``()``.
+...megmondja a MicroPythonnak, hogy a kijelzőn futtassa végig a "Helló, Világ!" *stringet* (a programozásban stringnek nevezik a karakterek sorozatát). A ``display`` a ``microbit`` modul egyik objektuma, ami az eszköz kijelzőjét jelöli. A kijelzőt utasíthatjuk dolgok elvézésére egy ponttal (``.``), amit egy parancsnak kinéző kifejezés követ (ezeket a kifejezéseket *metódusnak* nevezzük). Ebben az esetben a ``scroll`` metódust használjuk. Mivel a ``scroll`` metódusnak tudnia kell, hogy milyen karaktereket szeretnénk végigfuttatni a képernyőn, ezt zárójelek között két idézőjel közé rakjuk. Ezeket *argumentumoknak* nevezzük. Vagyis a ``display.scroll("Hello, World!")`` sor magyarul: "a kijelzőn szeretném végigfuttatni a "Helló, Világ!" szöveget". Ha egy metódusnak nincs argumentuma, akkor két üres zárójelet teszünk: ``()``.
 
-Copy the "Hello, World!" code into your editor and flash it onto the device.
-Can you work out how to change the message? Can you make it say hello to you?
-For example, I might make it say "Hello, Nicholas!". Here's a clue, you need to
-change the scroll method's argument.
+Másold be a "Helló, Világ!" kódot a szerkesztődbe és futtasd az eszközön. Ki tudod találni, hogyan kell megváltoztatni az üzenetet? Be tudod állítani, hogy neked köszönjön? Például én úgy írnám át, hogy azt írja ki, hogy "Helló, Dani!". Egy kis segítség: a ``scroll`` metódus argumentumát kell megváltoztatni.
 
 .. warning::
 
-    It may not work. :-)
+    Lehet, hogy nem fog működni. :-)
+    
+    Itt válnak a dolgok izgalmassá és MicroPython segítőkész próbál lenni. Ha hibát talál, egy segítő üzenetet fog megjeleníteni a micro:bit képernyőjén. Ha tudja, megmondja, hogy a kód melyik sorában van a hiba.
+    
+    A Python azt várja, hogy **PONTOSAN** a helyes kódot írd. Például a ``Microbit``, ``microbit`` és ``microBit`` nem ugyanazt jelenti a Python számára. Ha a MicroPython ``NameError``-t jelez, az valószínűleg azért van, mert valamit pontatlanul írtál. Ez olyan, mint a különbség "Nicholas" és "Nicolas" között. A nevük hasonlít, mégis két különböző emberről van szó.
 
-    This is where things get fun and MicroPython tries to be helpful. If
-    it encounters an error it will scroll a helpful message on the micro:bit's
-    display. If it can, it will tell you the line number for where the error
-    can be found.
-
-    Python expects you to type **EXACTLY** the right thing. So, for instance,
-    ``Microbit``, ``microbit`` and ``microBit`` are all different things to
-    Python. If MicroPython complains about a ``NameError`` it's probably
-    because you've typed something inaccurately. It's like the difference
-    between referring to "Nicholas" and "Nicolas". They're two different people
-    but their names look very similar.
-
-    If MicroPython complains about a ``SyntaxError`` you've simply typed code
-    in a way that MicroPython can't understand. Check you're not missing any
-    special characters like ``"`` or ``:``. It's like putting. a full stop in
-    the middle of a sentence. It's hard to understand exactly what you mean.
+    Ha a MicroPython ``SyntaxError``-t jelez, akkor valamit olyan módon írtál, amit a MicroPython nem ért meg. Ellenőrizd, hogy nem hagytál-e ki egy speciális karaktert, mint például ``"`` vagy ``:``. Ez olyan. mintha pontot raknál egy mondat közepére. Nehéz megérteni, hogy mit akarsz mondani pontosan.
 
     Your microbit may stop responding: you cannot flash new code to it or
     enter commands into the REPL. If this happens, try power cycling it. That
     is, unplug the USB cable (and battery cable if it's connected), then plug
     the cable back in again. You may also need to quit and re-start your code
     editor application.
+    
+    Előfordulhat, hogy a microbited nem reagál: nem tudsz új kódot futtatni rajta vagy kódot beírni a szerkesztődbe. Ha ez történik, akkor húzd ki az USB kábelt (és a töltőt is, ha csatlakoztatva van), majd csatlakotasd a kábelt újra. Lehet, hogy majd ki is kell lépned és újraindítanod a szerkesztőprogramod.
