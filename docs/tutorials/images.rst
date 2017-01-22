@@ -140,69 +140,58 @@ A MicroPythont utasíthatjuk egy képekből álló lista animálására. Szerenc
 
     display.show(Image.ALL_CLOCKS, loop=True, delay=100)
 
-As with a single image, we use ``display.show`` to show it on the
-device's display. However, we tell MicroPython to use ``Image.ALL_CLOCKS`` and
-it understands that it needs to show each image in the list, one after the
-other. We also tell MicroPython to keep looping over the list of images (so
-the animation lasts forever) by saying ``loop=True``. Furthermore, we tell it
-that we want the delay between each image to be only 100 milliseconds (a tenth
-of a second) with the argument ``delay=100``.
+Mint egy önmagában álló képnél, itt is a ``display.show`` kóddal mutatjuk a képernyőn. Megmondjuk a MicroPythonnak, hogy használja az ``Image.ALL_CLOCKS``-ot, és tudja, hogy mutatnia kell egymás után a listában található összes képet. A ``loop=True`` (magyarul ciklus=Igaz) kóddal azt mondjuk meg, hogy ciklikusan ismétlődjenek a képek (így az animáció örökké tart). A ``delay=100`` (magyarul késleltetés=100) argumentum azt jelenti, hogy a képek közötti késleltetés 100 milliszekundum legyen (100/1000 mp, vagyis 1/10 mp).
 
-Can you work out how to animate over the ``Image.ALL_ARROWS`` list? How do you
-avoid looping forever (hint: the opposite of ``True`` is ``False`` although
-the default value for ``loop`` is ``False``)? Can you change the speed of the
-animation?
+Ki tudod találni, hogyan animáld meg az ``Image.ALL_ARROWS`` listát? Hogyan kell kikerülni, hogy az animáció öröké tarson (segítség: a ``True`` (Igaz) ellentéte a ``False`` (Hamis), bár a ``loop`` argumentum alapértelmezett értéke egyébként is ``False``)? Meg tudod változtatni az animáció sebességét?
 
-Finally, here's how to create your own animation. In my example I'm going to
-make my boat sink into the bottom of the display::
+Végül lássuk, hogyan készítsd el a saját animációdat. Ebben a példában el fogom süllyeszteni a hajómat::
 
     from microbit import *
 
-    boat1 = Image("05050:"
+    hajó1 = Image("05050:"
                   "05050:"
                   "05050:"
                   "99999:"
                   "09990")
 
-    boat2 = Image("00000:"
+    hajó2 = Image("00000:"
                   "05050:"
                   "05050:"
                   "05050:"
                   "99999")
 
-    boat3 = Image("00000:"
+    hajó3 = Image("00000:"
                   "00000:"
                   "05050:"
                   "05050:"
                   "05050")
 
-    boat4 = Image("00000:"
+    hajó4 = Image("00000:"
                   "00000:"
                   "00000:"
                   "05050:"
                   "05050")
 
-    boat5 = Image("00000:"
+    hajó5 = Image("00000:"
                   "00000:"
                   "00000:"
                   "00000:"
                   "05050")
 
-    boat6 = Image("00000:"
+    hajó6 = Image("00000:"
                   "00000:"
                   "00000:"
                   "00000:"
                   "00000")
 
-    all_boats = [boat1, boat2, boat3, boat4, boat5, boat6]
-    display.show(all_boats, delay=200)
+    összes_hajó = [hajó1, hajó2, hajó3, hajó4, hajó5, hajó6]
+    display.show(összes_hajó, delay=200)
 
-Here's how the code works:
+Így működik a kód:
 
-* I create six ``boat`` images in exactly the same way I described above.
-* Then, I put them all into a list that I call ``all_boats``.
-* Finally, I ask ``display.show`` to animate the list with a delay of 200 milliseconds.
-* Since I've not set ``loop=True`` the boat will only sink once (thus making my animation scientifically accurate). :-)
+* Készítek hat hajós képet a fent leírt módszerrel.
+* Utána belerakom őket egy ``összes_hajó`` nevű listába.
+* Végül a ``display.show`` kóddal animációt készítek a lista képeiből. A késleltetés 0,2 másodperc.
+* Mivel nem állítottam be a ciklikus ismétlődést (``loop=True``), ezért a hajóm csak egyszer fog elsüllyedni (ezáltal az animációm tudományosan is helytálló lesz). :-)
 
-What would you animate? Can you animate special effects? How would you make an
-image fade out and then fade in again?
+Te milyen animációt készítenél? Tudsz csinálni különleges effektusokat? Hogyan oldanád meg, hogy egy kép elhalványodjon, majd újra előtűnjön?
