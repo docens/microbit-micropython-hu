@@ -1,14 +1,14 @@
-Helló, Világ!
+Hello, World!
 -------------
 
-A programozást hagyományosan úgy kezdjük, hogy a számítógéppel kiíratjuk, hogy "Helló, Világ!".
+A programozást hagyományosan úgy kezdjük, hogy a számítógéppel kiíratjuk, hogy "Hello, World!" (magyarul "Helló, Világ!").
 
 .. image:: ../scroll-hello.gif
 
 Ez MicroPythonnal egyszerű::
 
     from microbit import *
-    display.scroll("Helló, Világ!")
+    display.scroll("Hello, World!")
 
 Minden sornak fontos szerepe van. Az első sor::
 
@@ -18,11 +18,11 @@ Minden sornak fontos szerepe van. Az első sor::
 
 A második sor::
 
-    display.scroll("Helló, Világ!")
+    display.scroll("Hello, World!")
 
-...megmondja a MicroPythonnak, hogy a kijelzőn futtassa végig a "Helló, Világ!" *stringet* (a programozásban stringnek nevezik a karakterek sorozatát). A ``display`` a ``microbit`` modul egyik objektuma, ami az eszköz kijelzőjét jelöli. A kijelzőt utasíthatjuk dolgok elvézésére egy ponttal (``.``), amit egy parancsnak kinéző kifejezés követ (ezeket a kifejezéseket *metódusnak* nevezzük). Ebben az esetben a ``scroll`` metódust használjuk. Mivel a ``scroll`` metódusnak tudnia kell, hogy milyen karaktereket szeretnénk végigfuttatni a képernyőn, ezt zárójelek között két idézőjel közé rakjuk. Ezeket *argumentumoknak* nevezzük. Vagyis a ``display.scroll(Helló, Világ!")`` sor magyarul: "a kijelzőn szeretném végigfuttatni a "Helló, Világ!" szöveget". Ha egy metódusnak nincs argumentuma, akkor két üres zárójelet teszünk: ``()``.
+...megmondja a MicroPythonnak, hogy a kijelzőn futtassa végig a "Hello, World!" *stringet* (a programozásban stringnek nevezik a karakterek sorozatát). A ``display`` a ``microbit`` modul egyik objektuma, ami az eszköz kijelzőjét jelöli. A kijelzőt utasíthatjuk dolgok elvégzésére egy ponttal (``.``), amit egy parancsnak kinéző kifejezés követ (ezeket a kifejezéseket *metódusnak* nevezzük). Ebben az esetben a ``scroll`` metódust használjuk. Mivel a ``scroll`` metódusnak tudnia kell, hogy milyen karaktereket szeretnénk végigfuttatni a képernyőn, ezt zárójelek között két idézőjel közé rakjuk. Ezeket *argumentumoknak* nevezzük. Vagyis a ``display.scroll("Hello, World!")`` sor magyarul: "a kijelzőn szeretném végigfuttatni a "Hello, World!" szöveget". Ha egy metódusnak nincs argumentuma, akkor két üres zárójelet teszünk: ``()``.
 
-Másold be a "Helló, Világ!" kódot a szerkesztődbe és futtasd az eszközön. Ki tudod találni, hogyan kell megváltoztatni az üzenetet? Be tudod állítani, hogy neked köszönjön? Például én úgy írnám át, hogy azt írja ki, hogy "Helló, Dani!". Egy kis segítség: a ``scroll`` metódus argumentumát kell megváltoztatni.
+Másold be a "Hello, World!" kódot a szerkesztődbe és futtasd az eszközön. Ki tudod találni, hogyan kell megváltoztatni az üzenetet? Be tudod állítani, hogy neked köszönjön? Például én úgy írnám át, hogy azt írja ki, hogy "Helló, Dani!". Egy kis segítség: a ``scroll`` metódus argumentumát kell megváltoztatni.
 
 .. warning::
 
