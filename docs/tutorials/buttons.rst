@@ -1,9 +1,11 @@
-Buttons
+Gombok
 -------
 
 So far we have created code that makes the device do something. This is called
 *output*. However, we also need the device to react to things. Such things are
 called *inputs*.
+
+Eddig olyan kódokat írtunk, amik véghez vitettek valamit az eszközzel. Ezt *kimenet*nek nevezzük. Viszont arra is szükségünk van, hogy az eszközünk tudjon reagálni is a dolgokra. Ezeket a dolgokat *bemenet*nek hívjuk.
 
 It's easy to remember: output is what the device puts out to the world
 whereas input is what goes into the device for it to process.
