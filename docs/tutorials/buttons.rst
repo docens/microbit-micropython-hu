@@ -1,42 +1,27 @@
 Gombok
 -------
 
-So far we have created code that makes the device do something. This is called
-*output*. However, we also need the device to react to things. Such things are
-called *inputs*.
+Eddig olyan kódokat írtunk, amik véghez vitettek valamit az eszközzel. Ezt *kimenetnek* nevezzük. Viszont arra is szükségünk van, hogy az eszközünk tudjon reagálni is a dolgokra. Ezeket a dolgokat *bemenetnek* hívjuk.
 
-Eddig olyan kódokat írtunk, amik véghez vitettek valamit az eszközzel. Ezt *kimenet*nek nevezzük. Viszont arra is szükségünk van, hogy az eszközünk tudjon reagálni is a dolgokra. Ezeket a dolgokat *bemenet*nek hívjuk.
+Könnyű megjegyezni: a kimenet az, amit az eszköz kijelez, kiír, míg a bemenet az, amit beküldünk neki feldolgozásra.
 
-It's easy to remember: output is what the device puts out to the world
-whereas input is what goes into the device for it to process.
+A micro:bit legszembetűnőbb beviteli eszközei a két (``A`` és ``B`` jelölésű) gomb. Valahogy meg kell oldanunk, hogy a MicroPython reagáljon a gombnyomásokra.
 
-The most obvious means of input on the micro:bit are its two buttons, labelled
-``A`` and ``B``. Somehow, we need MicroPython to react to button presses.
-
-This is remarkably simple::
+Ez kifejezetten egyszerű::
 
     from microbit import *
 
     sleep(10000)
     display.scroll(str(button_a.get_presses()))
 
-All this script does is sleep for ten thousand milliseconds (i.e. 10 seconds)
-and then scrolls the number of times you pressed button ``A``. That's it!
+Ez a kód mindössze annyit csinál, hogy tízezer milliszekundum (10 mp) *alvás* (vagyis késleltetés) után végigtuttatja a képernyőn azt a számot, ahányszor megnyomtad az ``A`` gombot. Ennyi!
 
-While it's a pretty useless script, it introduces a couple of interesting new
-ideas:
+Igaz, hogy ez egy elég felesleges program, viszont megjelenik benne néhány érdekes, új koncepció:
 
-#. The ``sleep`` *function* will make the micro:bit sleep for a certain number
-   of milliseconds. If you want a pause in your program, this is how to do it.
-   A *function* is just like a *method*, but it isn't attached by a dot to an
-   *object*.
-#. There is an object called ``button_a`` and it allows you to get the number
-   of times it has been pressed with the ``get_presses`` *method*.
+#. A ``sleep`` (magyarul alvás) *függvény* elaltatja, azaz késlelteti a következő kódrész lefutását valahány milliszekundummal. Ha tehát szünetet szeretnél tenni a programodba, azt így tudod megtenni. Egy *függvény* pont olyan, mint egy *metódus*, csak nem kapcsoljuk *objektumhoz* egy pont segítségével.
+#. Van egy ``button_a`` nevű objektum, és a ``get_presses`` *metódus* segítségével megkaphatjuk, hogy hányszor lett megnyomva.
 
-Since ``get_presses`` gives a numeric value and ``display.scroll`` only
-displays characters, we need to convert the numeric value into a string of
-characters. We do this with the ``str`` function (short for "string" ~ it
-converts things into strings of characters).
+Mivel a ``get_presses`` metódus egy numerikus értéket ad vissza és a ``display.scroll`` metódus csak karaktereket tud mutatni, át kell alakítanunk a numerikus értéket egy sztringgé. Ezt a ``str`` függvénnyel tudjuk megtenni, ami dolgokat sztringekké alakít át.
 
 The third line is a bit like an onion. If the parenthesis are the
 onion skins then you'll notice that ``display.scroll`` contains ``str`` that
