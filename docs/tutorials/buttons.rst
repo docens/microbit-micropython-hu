@@ -14,7 +14,7 @@ Ez kifejezetten egyszerű::
     sleep(10000)
     display.scroll(str(button_a.get_presses()))
 
-Ez a kód mindössze annyit csinál, hogy tízezer milliszekundum (10 mp) *alvás* (vagyis késleltetés) után végigtuttatja a képernyőn azt a számot, ahányszor megnyomtad az ``A`` gombot. Ennyi!
+Ez a kód mindössze annyit csinál, hogy tízezer milliszekundum (10 mp) *alvás* (vagyis késleltetés) után végigfuttatja a képernyőn azt a számot, ahányszor megnyomtad az ``A`` gombot. Ennyi!
 
 Igaz, hogy ez egy elég felesleges program, viszont megjelenik benne néhány érdekes, új koncepció:
 
