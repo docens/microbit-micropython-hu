@@ -1,6 +1,7 @@
 Hello, World! blabla
 -------------
 
+Miért nem változik meg?
 A programozást hagyományosan úgy kezdjük, hogy a számítógéppel kiíratjuk, hogy "Hello, World!" (magyarul "Helló, Világ!").
 
 .. image:: ../scroll-hello.gif
