@@ -23,32 +23,25 @@ Igaz, hogy ez egy elég felesleges program, viszont megjelenik benne néhány é
 
 Mivel a ``get_presses`` metódus egy numerikus értéket ad vissza és a ``display.scroll`` metódus csak karaktereket tud mutatni, át kell alakítanunk a numerikus értéket egy sztringgé. Ezt a ``str`` függvénnyel tudjuk megtenni, ami dolgokat sztringekké alakít át.
 
-The third line is a bit like an onion. If the parenthesis are the
-onion skins then you'll notice that ``display.scroll`` contains ``str`` that
-itself contains ``button_a.get_presses``. Python attempts to work out the
-inner-most answer first before starting on the next layer out. This is called
-*nesting* - the coding equivalent of a Russian Matrioshka doll.
+A harmadik sor egy kicsit olyan, mint egy hagyma. A zárójelek a hagyma héjai. Észreveheted, hogy a ``button_a.get_presses`` benne van a ``str`` függvényben, ami meg a ``display.scroll``-ban van benne. A Python először a legbelső kódrészletet futtatja le, majd egyre kijjebb halad. Ezt *egymásba ágyazásnak* hívjuk - az orosz matrjoska babák programozásban használt megfelelője. 
 
 .. image:: matrioshka.jpg
 
-Let's pretend you've pressed the button 10 times. Here's how Python works out
-what's happening on the third line:
+Tegyük fel, hogy megnyomtad a gombot 10-szer. Nézzük meg, hogy jön rá a Python, hogy mit csinál a harmadik sor:
 
-Python sees the complete line and gets the value of ``get_presses``::
+A Python látja az egész sort, majd megállapítja a ``get_presses`` metódus értékét::
 
     display.scroll(str(button_a.get_presses()))
 
-Now that Python knows how many button presses there have been, it converts the
-numeric value into a string of characters::
+Most, hogy tudja, hogy hány gombnyomás történt, átalakítja a numerikus értéket sztringgé::
 
     display.scroll(str(10))
 
-Finally, Python knows what to scroll across the display::
+Végül, a kapott sztringet végigfuttatja a képernyőn::
 
     display.scroll("10")
-
-While this might seem like a lot of work, MicroPython makes this happen
-extraordinarily fast.
+    
+Ez sok melónak tűnik, mégis a MicroPython elképesztő gyorsan futtatja le ezt a kódot.
 
 Event Loops
 +++++++++++
@@ -173,4 +166,4 @@ Can you think of ways to make this game less tragic? How would you check if
 logical operators to help check multiple truth statements (things that
 produce either ``True`` or ``False`` results).
 
-.. footer:: The image of Matrioshka dolls is licensed CC BY-SA 3.0, https://commons.wikimedia.org/w/index.php?curid=69402
+.. footer:: A matrjoska babáról készült fotó licensze: CC BY-SA 3.0, https://commons.wikimedia.org/w/index.php?curid=69402
