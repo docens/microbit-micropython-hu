@@ -43,46 +43,36 @@ Végül, a kapott sztringet végigfuttatja a képernyőn::
     
 Ez sok melónak tűnik, mégis a MicroPython elképesztő gyorsan futtatja le ezt a kódot.
 
-Event Loops
+While ciklusok
 +++++++++++
 
-Often you need your program to hang around waiting for something to happen. To
-do this you make it loop around a piece of code that defines how to react to
-certain expected events such as a button press.
+Gyakran szükséges, hogy a kód ne azonnal fusson le, hanem várjon egy esemény bekövetkezéséig. Ehhez az kell, hogy a program ismételjen egy kódrészletet, ami megmondja, hogy hogyan reagáljon konkrét eseményekre (mint például egy gomb megnyomására).
 
-To make loops in Python you use the ``while`` keyword. It checks if something
-is ``True``. If it is, it runs a *block of code* called the *body* of the loop.
-If it isn't, it breaks out of the loop (ignoring the body) and the rest of the
-program can continue.
+A Pythonban ciklusokhoz a ``while`` (magyarul míg) kulcsszót használjuk. Ez leellenőrzi, hogy valami igaz-e (``True``). Ha igen, akkor lefutatt egy *kódtömböt*, amit angolul a ciklus *body*-jának (magyarul test) hívnak. Ha nem igaz a feltétel, akkor a program kitör a ciklusból, nem futtatja le a bodyban lévő kódot, hanem továbbhalad a kódban. 
 
-Python makes it easy to define blocks of code. Say I have a to-do list written
-on a piece of paper. It probably looks something like this::
+A Pythonban egyszerű kódtömböt definiálni. Mondjuk, hogy írtam egy tennivaló listát egy papírra. Valahogy így fog kinézni::
 
-    Shopping
-    Fix broken gutter
-    Mow the lawn
+    Vásárlás
+    Megjavítani a törött ereszt
+    Fűnyírás
 
-If I wanted to break down my to-do list a bit further, I might write something
-like this::
+Ha a pontokat jobban ki szeretném fejteni, akkor valami ilyesmit írnék::
 
-    Shopping:
-        Eggs
+    Vásárlás:
+        Tojás
         Bacon
-        Tomatoes
-    Fix broken gutter:
-        Borrow ladder from next door
-        Find hammer and nails
-        Return ladder
-    Mow the lawn:
-        Check lawn around pond for frogs
-        Check mower fuel level
+        Paradicsom
+    Megjavítani a törött ereszt:
+        Létrát kölcsönkérni a szomszédtól
+        Kalapácsot és szögeket keresni
+        Létrát visszavinni
+    Fűnyírás:
+        Tó körül körülnézni, hátha vannak békák
+        Leelenőrizni a fűnyíró üzemanyagszintjét
 
-It's obvious that the main tasks are broken down into sub-tasks that are
-*indented* underneath the main task to which they are related. So ``Eggs``,
-``Bacon`` and ``Tomatoes`` are obviously related to ``Shopping``. By indenting
-things we make it easy to see, at a glance, how the tasks relate to each other.
+A főfeladatokat több kisebbb feladatra bontottuk szét. Minden kisebb feladat a hozzá tartozó főfeladat alá kerül behúzással. Vagyis a ``Tojás``, a ``Bacon`` és a ``Paradicsom`` a ``Vásárlás``-hoz kapcsolódik. A behúzás miatt első ránézésre meg lehet állapítani, hogy hogyan viszonyulnak egymáshoz a feladatok.
 
-This is called *nesting*. We use nesting to define blocks of code like this::
+Ezt hívjuk *egymása ágyazásnak*. Egymásba ágyazással definiáljuk a kódtömböket::
 
     from microbit import *
 
@@ -91,22 +81,13 @@ This is called *nesting*. We use nesting to define blocks of code like this::
 
     display.show(Image.SURPRISED)
 
-The ``running_time`` function returns the number of milliseconds since the
-device started.
+A ``running_time`` (magyarul futás ideje) függvény azt a számot adja vissza, ahány milliszekundum eltelt a készülék beindítása óta.
 
-The ``while running_time() < 10000:`` line checks if the running time is less
-than 10000 milliseconds (i.e. 10 seconds). If it is, *and this is where we can
-see scoping in action*, then it'll display ``Image.ASLEEP``. Notice how this is
-indented underneath the ``while`` statement *just like in our to-do list*.
+A ``while running_time() < 10000:`` sor megnézi, hogy a program futásának ideje kevesebb-e, mint 10000 milliszekundum (10 mp). Ha igen, akkor a kijelző megjeleníti az ``Image.ASLEEP`` képet. Figyeld meg, hogy a harmadik sor be van húzva a ``while`` feltétel alatt, *pont mint a tennivaló listánkban*. 
 
-Obviously, if the running time is equal to or greater than 10000 milliseconds
-then the display will show ``Image.SURPRISED``. Why? Because the ``while``
-condition will be False (``running_time`` is no longer ``< 10000``). In that
-case the loop is finished and the program will continue after the ``while``
-loop's block of code. It'll look like your device is asleep for 10
-seconds before waking up with a surprised look on its face.
+Mikor a futás ideje nagyobb vagy egyenlő mint 10000 milliszekundum, a képernyő az ``Image.SURPRISED`` képet fogja mutatni. Hogy miért? Mert a ``while`` feltétel már hamis (``False``) lesz, a ``running_time`` már nem lesz ``< 10000``. Ebben az esetben a ciklusnak vége van, a program továbblép a ``while`` ciklus kódtömbjén. Az eszköz úgy fog kinézni, mintha 10 másodpercet aludna, majd csodálkozó fejjel felébredne.
 
-Try it!
+Próbáld ki!
 
 Handling an Event
 +++++++++++++++++
