@@ -1,11 +1,11 @@
 Gombok
 -------
 
-Eddig olyan kódokat írtunk, amik véghez vitettek valamit az eszközzel. Ezt *kimenetnek* nevezzük. Viszont arra is szükségünk van, hogy az eszközünk tudjon reagálni is a dolgokra. Ezeket a dolgokat *bemenetnek* hívjuk.
+Eddig olyan kódokat írtunk, amik megcsináltattak valamit az eszközzel. Ezt *kimenetnek* nevezzük. Viszont arra is szükségünk van, hogy az eszközünk tudjon reagálni is a dolgokra. Ezeket a dolgokat *bemenetnek* hívjuk.
 
 Könnyű megjegyezni: a kimenet az, amit az eszköz kijelez, kiír, míg a bemenet az, amit beküldünk neki feldolgozásra.
 
-A micro:bit legszembetűnőbb beviteli eszközei a két (``A`` és ``B`` jelölésű) gomb. Valahogy meg kell oldanunk, hogy a MicroPython reagáljon a gombnyomásokra.
+A micro:bit legszembetűnőbb beviteli eszköze a két (``A`` és ``B`` jelölésű) gomb. Valahogy meg kell oldanunk, hogy a MicroPython reagáljon a gombnyomásokra.
 
 Ez kifejezetten egyszerű::
 
