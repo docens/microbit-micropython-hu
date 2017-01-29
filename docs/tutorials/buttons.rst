@@ -89,24 +89,19 @@ Mikor a futás ideje nagyobb vagy egyenlő mint 10000 milliszekundum, a képerny
 
 Próbáld ki!
 
-Handling an Event
+Események kezelése
 +++++++++++++++++
 
-If we want MicroPython to react to button press events we should put it into
-an infinite loop and check if the button ``is_pressed``.
+Ha azt szeretnénk, hogy a MicroPython reagáljon a gombok megnyomására, akkor egy végtelen ciklust kell létrehoznunk, ami ellenőrzi, hogy a gomb meg lett-e nyomva (``is_pressed``).
 
-An infinite loop is easy::
+Végtelen ciklusokat könnyen csinálhatunk::
 
     while True:
-        # Do stuff
+        # Csinálj dolgokat
 
-(Remember, ``while`` checks if something is ``True`` to work out if it should
-run its block of code. Since ``True`` is obviously ``True`` for all time, you
-get an infinite loop!)
+(A ``while`` ciklus ellenőrzi, hogy egy feltétel igaz-e, és ez alapján dönti el, hogy lefutassa-e a kódtömbjét. Mivel a ``True`` (igaz) egyértelműen mindig igaz lesz, ezért végtelen ciklust kapunk!)
 
-Let's make a very simple cyber-pet. It's always sad unless you're pressing
-button ``A``. If you press button ``B`` it dies. (I realise this isn't a very
-pleasant game, so perhaps you can figure out how to improve it.)::
+Csináljunk egy nagyon egyszerű, virtuális állatot! Mindig szomorú lesz, kivéve, ha megnyomod az ``A`` gombot. Ha megnyomod a ``B`` gombot, meghal. (Ez nem egy túl barátságos játék, de esetleg gondolkozhatsz rajta, hogy hogyan tegyük azzá.)::
 
     from microbit import *
 
@@ -120,31 +115,19 @@ pleasant game, so perhaps you can figure out how to improve it.)::
 
     display.clear()
 
-Can you see how we check what buttons are pressed? We used ``if``,
-``elif`` (short for "else if") and ``else``. These are called *conditionals*
-and work like this::
+Látod hogyan ellenőrizzük, hogy melyik gombokat nyomják meg éppen? Ehhez az ``if`` (magyarul ha), az ``elif`` (else if rövidítése - másik ha) és az ``else`` (más) kulcsszavakat használjuk. Ezeket *feltételeknek* hívjuk. Itt látható a működésük::
 
-    if something is True:
-        # do one thing
-    elif some other thing is True:
-        # do another thing
+    if valami igaz (True):
+        # csinálj valamit
+    elif valami más dolog igaz (True):
+        # csinálj valami mást
     else:
-        # do yet another thing.
+        # itt is csinálj valamit
 
-This is remarkably similar to English!
+Az ``is_pressed`` (magyarul meg van-e nyomva) metódus csak kétféle választ adhat: ``True`` vagy ``False`` (igaz vagy hamis). Ha épp nyomod a gombot, akkor ``True``-t fog visszaadni, egyébként ``False``-ot. A fenti kód magyarra fordítva: "amikor megnyomják az A gombot, akkor mutass egy vidám arcot, ha nem nyomják meg, viszont a B gombot igen, akkor lépj ki a ciklusból, egyébként meg mutass egy szomorú arcot". A ``break`` utasítással kilépünk a ciklusból (ezután már nem fog ismétlődni tovább a ciklus).
 
-The ``is_pressed`` method only produces two results: ``True`` or ``False``.
-If you're pressing the button it returns ``True``, otherwise it returns
-``False``. The code above is saying, in English, "for ever and ever, if
-button A is pressed then show a happy face, else if button B is pressed break
-out of the loop, otherwise display a sad face." We break out of the loop (stop
-the program running for ever and ever) with the ``break`` statement.
+A legvégén, amikor a virtuális állatunk meghalt, a ``clear`` metódussal eltüntetünk mindent a képernyőről.
 
-At the very end, when the cyber-pet is dead, we ``clear`` the display.
-
-Can you think of ways to make this game less tragic? How would you check if
-*both* buttons are pressed? (Hint: Python has ``and``, ``or`` and ``not``
-logical operators to help check multiple truth statements (things that
-produce either ``True`` or ``False`` results).
+Át tudod írni úgy a kódot, hogy a játék kevésbé legyen tragikus? Hogyan ellenőriznéd le, hogy *mindkét* gomb meg van-e nyomva? (Segítség: a Pythonban az ``and`` (és), az ``or`` (vagy) és a ``not`` (nem) logikai operátorok segítségével leelenőrizhetünk több feltételt is.)
 
 .. footer:: A matrjoska babáról készült fotó licensze: CC BY-SA 3.0, https://commons.wikimedia.org/w/index.php?curid=69402
