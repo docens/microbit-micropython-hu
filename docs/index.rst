@@ -3,31 +3,24 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-BBC micro:bit MicroPython documentation
+BBC micro:bit MicroPython dokumentáció
 =======================================
 
-Welcome!
+Köszöntünk!
 
-The BBC micro:bit is a small computing device for children. One of the
-languages it understands is the popular Python programming language. The
-version of Python that runs on the BBC micro:bit is called MicroPython.
+A BBC micro:bit egy kicsi számítástechnikai eszköz, elsősorban gyerekeknek. A micro:bit többek között a népszerű Python programozási nyelvet is érti. A MicroPython a Python nyelv azon verziója, ami fut a BBC micro:biten.
 
-This documentation includes lessons for teachers
-and API documentation for developers (check out the index on the left). We hope
-you enjoy developing for the BBC micro:bit using MicroPython.
+Ez a dokumentáció leckéket tartalmaz tanároknak és API dokumentációt fejlesztőknek (vess egy pillantást a balra lévő tárgymutatóra). Reméljük, szívesen segítesz a BBC micro:bit fejlesztésében.
 
-If you're a new programmer, teacher or unsure where to start, begin with the tutorials.
+Ha a programozás új neked, tanár vagy, vagy csak nem tudod, mi legyen az első lépés, kezdd az oktatóanyaggal.
 
 .. image:: comic.png
 
-To get involved with the community subscribe to the microbit@python.org
-mailing list (https://mail.python.org/mailman/listinfo/microbit).
+Ha a közösség tagja szeretnél lenni, iratkozz fel a microbit@python.org levelezőlistára (https://mail.python.org/mailman/listinfo/microbit).
 
 .. note::
-
-    This project is under active development. Please help other
-    developers by adding tips, how-tos, and Q&A to this document.
-    Thanks!
+    
+    Ez a projekt fejlesztés alatt áll.
 
 Projects related to MicroPython on the BBC micro:bit include:
 
