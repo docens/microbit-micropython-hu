@@ -1,4 +1,4 @@
-Hello, World! Na Miki, látod h működik? :D
+Hello, World!
 -------------
 
 A programozást hagyományosan úgy kezdjük, hogy a számítógéppel kiíratjuk, hogy "Hello, World!" (magyarul "Helló, Világ!").
