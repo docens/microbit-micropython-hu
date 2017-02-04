@@ -46,7 +46,7 @@ Akkor fogod a legtöbb sikert elérni, ha felfedezel, kísrletezgetsz és játsz
 
 Egy kis figyelmeztetés: *sokszor fogsz hibázni*, és ez rendben is van. **A jó szoftverfejlesztők a hibákból tanulnak**. Akik közülünk szoftverfejlesztőként dolgoznak, élvezetesnek találják a hibakeresést és a hibák megismétlésének elkerülését.
 
-Ha kétségek gyötörnének, csak idézd fel a MicroPython alapelvét::
+Ha kétségek gyötörnének, csak idézd fel a MicroPython mottóját::
     
     Kódolj,
     Hackeld meg,
