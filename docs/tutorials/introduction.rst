@@ -40,29 +40,23 @@ A MicroPython nem tartalmaz minden programkönyvtárat, ami a "normális" Python
 
 A Python és a MicroPython szoftverek ingyenesek. Ez nem csak azt jelenti, hogy nem kell a használatukért fizetni, de Te is segíthetsz a Python közösségnek. Ennek a formája lehet egy kód, dokumentáció, hibajelentés, egy közösségi csoport létrehozása, vagy akár oktatóanyagok írása (mint ez itt). Valójában a Python azon elemei, amik a BBC micro:bithez íródtak, egy nemzetközi, önkéntesekből álló csapat munkája, akik a szabadidejükben dolgoztak.
 
-These lessons introduce MicroPython and the BBC
-micro:bit in easy-to-follow steps. Feel free to adopt and adapt them for
-classroom based lessons, or perhaps just follow them on your own at home.
+A dokumentációban található leckék können követhető lépésekben, alapos magyarázatokkal mutatják be a MicroPythont és a BBC micro:bitet. Nyugodtan használd őket iskolai tanórák keretében, vagy csak otthoni tanulásra.
 
-You'll have most success if you explore, experiment and play. You can't break
-a BBC micro:bit by writing incorrect code. Just dive in!
+Akkor fogod a legtöbb sikert elérni, ha felfedezel, kísrletezgetsz és játszol. Egy hibás kóddal nem tudod elrondtani az eszközt! Ugorj fejest a programozásba!
 
-A word of warning: *you will fail many times*, and that is fine. **Failure is
-how good software developers learn**. Those of us who work as software
-developers have a lot of fun tracking down bugs and avoiding the repetition of
-mistakes.
+Egy kis figyelmeztetés: *sokszor fogsz hibázni*, és ez rendben is van. **A jó szoftverfejlesztők a hibákból tanulnak**. Akik közülünk szoftverfejlesztőként dolgoznak, élvezetesnek találják a hibakeresést és a hibák megismétlésének elkerülését.
 
-If in doubt, remember the Zen of MicroPython::
+Ha kétségek gyötörnének, csak idézd fel a MicroPython alapelvét::
+    
+    Kódolj,
+    Hackeld meg,
+    A kevesebb több,
+    Ne bonyolítsd túl,
+    A kicsi gyönyörű,
+    
+    Légy bátor! Merj hibázni! Tanulj, és érezd jól magad!
+    Fejezd ki magad a MicroPythonnal.
+    
+    Jó hackelést! :-)
 
-    Code,
-    Hack it,
-    Less is more,
-    Keep it simple,
-    Small is beautiful,
-
-    Be brave! Break things! Learn and have fun!
-    Express yourself with MicroPython.
-
-    Happy hacking! :-)
-
-Best of luck!
+Sok szerencsét!
