@@ -21,15 +21,19 @@ Ha a közösség tagja szeretnél lenni, iratkozz fel a microbit@python.org leve
 .. note::
     
     Ez a projekt fejlesztés alatt áll.
+    
+..  This project is under active development. Please help other
+    developers by adding tips, how-tos, and Q&A to this document.
+    Thanks!
 
-Projects related to MicroPython on the BBC micro:bit include:
+Néhány MicroPythonhoz és a BBC micro:bithez kapcsolódó projekt:
 
-* `Mu <https://github.com/ntoll/mu>`_ - a simple code editor for kids, teachers and beginner programmers. Probably the easiest way for people to program MicroPython on the BBC micro:bit.
-* `uFlash <https://uflash.readthedocs.io/en/latest/>`_ - a command line tool for flashing raw Python scripts onto a BBC micro:bit.
+* `Mu <https://github.com/ntoll/mu>`_ - egy egyszerű kódszerkesztő gyerekeknek, tanároknak és kezdő rogramozóknak. Az egyik legegyszerűbb módja a BBC micro:bit MicroPython nyelven való programozásának.
+* `uFlash <https://uflash.readthedocs.io/en/latest/>`_ - egy parancssori eszköz, amivel PYthon kódot tudsz lefuttatni a BBC micro:biteden.
 
 .. toctree::
     :maxdepth: 2
-    :caption: Tutorials
+    :caption: Leckék
 
     tutorials/introduction
     tutorials/hello
@@ -49,7 +53,7 @@ Projects related to MicroPython on the BBC micro:bit include:
 
 .. toctree::
    :maxdepth: 2
-   :caption: API Reference
+   :caption: API referencia
 
    microbit_micropython_api.rst
    microbit.rst
@@ -73,7 +77,7 @@ Projects related to MicroPython on the BBC micro:bit include:
 
 .. toctree::
    :maxdepth: 2
-   :caption: Developer Guide
+   :caption: Fejlesztői útmutató
 
    devguide/installation
    devguide/flashfirmware
@@ -83,7 +87,7 @@ Projects related to MicroPython on the BBC micro:bit include:
 
 .. toctree::
    :maxdepth: 2
-   :caption: Indices and tables
+   :caption: Indexek és táblázatok
 
 * :ref:`genindex`
 * :ref:`modindex`
