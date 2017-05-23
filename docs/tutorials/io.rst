@@ -1,31 +1,22 @@
-Input/Output
+Bemenet/Kimenet
 ------------
 
-There are strips of metal along the bottom edge of the BBC micro:bit that make
-it look as if the device has teeth. These are the input/output pins (or I/O pins
-for short).
+A BBC mirco:bit alsó szegélye mentén találhatóak fém sávok, amiktől úgy néz ki, mintha fogai lennének. Ezek a bemeneti/kimeneti lábak (angolul input/output pins, röviden I/O pins).
 
 .. image:: blue-microbit.png
 
-Some of the pins are bigger than others so it's possible to attach crocodile
-clips to them. These are the ones labelled 0, 1, 2, 3V and GND (computers
-always start counting from zero). If you attach an edge connector board to the
-device it's possible to plug in wires connected to the other (smaller) pins.
+Néhány láb nagyobb, mint a többi, így lehet krokodilcsipeszt hozzájuk csatlakoztatni. Ezek azok, amik 0, 1, 2, 3V és GND címkével vannak ellátva (a számítógépek mindig 0-tól kezdik a számolást). Ha hozzácsatlakoztatsz egy *edge connectort* a készülékhez, be lehet dugni vezetékeket, amik a többi (kisebb) lábhoz csatlakoznak.
 
-Each pin on the BBC micro:bit is represented by an *object* called ``pinN``
-where ``N`` is the pin number. So, for example, to do things with the pin
-labelled with a 0 (zero), use the object called ``pin0``.
+Minden egyes lábat a BBC micro:biten egy *objektum* jelöl, aminek a neve ``pinN``, ahol ``N`` a láb (*pin*) száma. Tehát például ha a 0-val jelölt lábbal szeretnél valamit kezdeni, akkor használd a ``pin0`` nevű objektumot.
 
-Simple!
+Egyszerű!
 
-These objects have various *methods* associated with them depending upon what
-the specific pin is capable of.
+Ezekhez az objektumokhoz különféle *metódusok* tartoznak, attól függően, hogy az adott láb mit tud csinálni.
 
-Ticklish Python
+Csikis Python
 +++++++++++++++
 
-The simplest example of input via the pins is a check to see if they are
-touched. So, you can tickle your device to make it laugh like this::
+A legegyszerűbb példa a lábak általi bemenetre az, ha megnézzük, hogy meg vannak-e érintve (angolul *is touched*). Meg tudod csikizni az eszközödet, hogy az nevessen::
 
     from microbit import *
 
@@ -35,9 +26,7 @@ touched. So, you can tickle your device to make it laugh like this::
         else:
             display.show(Image.SAD)
 
-With one hand, hold your device by the GND pin. Then, with your other hand,
-touch (or tickle) the 0 (zero) pin. You should see the display change from
-grumpy to happy!
+AZ egyik kezeddel fogd meg az esközt a GND lábnál. Aztán a másik kezeddel érintsd meg (vagy csikizd meg) a 0-s lábat. Láthatod a képernyőn, ahogy a szomorú fejből boldog lesz!
 
 This is a form of very basic input measurement. However, the fun really starts
 when you plug in circuits and other devices via the pins.
