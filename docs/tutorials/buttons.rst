@@ -72,7 +72,7 @@ Ha a pontokat jobban ki szeretném fejteni, akkor valami ilyesmit írnék::
 
 A főfeladatokat több kisebbb feladatra bontottuk szét. Minden kisebb feladat a hozzá tartozó főfeladat alá kerül behúzással. Vagyis a ``Tojás``, a ``Bacon`` és a ``Paradicsom`` a ``Vásárlás``-hoz kapcsolódik. A behúzás miatt első ránézésre meg lehet állapítani, hogy hogyan viszonyulnak egymáshoz a feladatok.
 
-Ezt hívjuk *egymása ágyazásnak*. Egymásba ágyazással definiáljuk a kódtömböket::
+Ezt hívjuk *egymásba ágyazásnak*. Egymásba ágyazással definiáljuk a kódtömböket::
 
     from microbit import *
 
