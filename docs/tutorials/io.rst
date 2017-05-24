@@ -26,10 +26,9 @@ A legegyszerűbb példa a lábak általi bemenetre az, ha megnézzük, hogy meg 
         else:
             display.show(Image.SAD)
 
-AZ egyik kezeddel fogd meg az esközt a GND lábnál. Aztán a másik kezeddel érintsd meg (vagy csikizd meg) a 0-s lábat. Láthatod a képernyőn, ahogy a szomorú fejből boldog lesz!
+Az egyik kezeddel fogd meg az esközt a GND lábnál. Aztán a másik kezeddel érintsd meg (vagy csikizd meg) a 0-s lábat. Láthatod a képernyőn, ahogy a szomorú fej boldoggá válik!
 
-This is a form of very basic input measurement. However, the fun really starts
-when you plug in circuits and other devices via the pins.
+Ez a bemenet vizsgálatának egyik legalapvetőbb módja. Az igazi mók akkor kezdődik, ha áramköröket és egyéb eszközöket csatlakoztatsz az eszközhöz a labako keresztül.
 
 Bleeps and Bloops
 +++++++++++++++++
